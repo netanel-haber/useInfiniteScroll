@@ -16,20 +16,24 @@ sandbox - https://codesandbox.io/s/damp-mountain-78wnx (src in example folder)
 
 Pay attention to **useInfiniteScroll** and **ScrollProvider**:
 ```javascript
-const Child = memo(() => <div style={{ height:"40px", height: "40px",  }}/>);
-const data = Array(1000).fill(0);
-const ScrollAwareChildren = memo(() => {
-	const slice = useInfiniteScroll(data);
-	return slice.map((d, i) => <Child key={i} ></Child>)
-});
+const Child = memo(() => <img
+  style={{ margin: "10px auto", display: "block" }}
+  alt=""
+  height={`${80 * Math.random() + 20}px`}
+  src="https://media1.tenor.com/images/806fa85fc55a55de66ab310e500b5f0f/tenor.gif?itemid=5716621" />
+);
+const ScrollAwareChildren = memo(() => useInfiniteScroll(Array(1000).fill(0))
+  .map((d, i) => <Child key={i} />));
 
-const App = ()=>(
-	<ScrollProvider>
-		<div style={{ overflowY: "scroll", height: "60vh", backgroundColor: "beige" }}>
-		  <ScrollAwareChildren/>
-		</div>
-	</ScrollProvider>
-  );
+
+ReactDOM.render(
+  <ScrollProvider>
+    <div style={{ overflowY: "scroll", height: "60vh", backgroundColor: "beige" }}>
+      <ScrollAwareChildren />
+    </div>
+  </ScrollProvider>,
+  document.getElementById("root")
+);
 ```
 ScrollProvider attaches a ref to the scroll container passed to it as a child.
 This ref allows the component to follow the scroll container's scroll position and create a context.
