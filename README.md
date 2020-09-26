@@ -1,13 +1,13 @@
-# react-use-infinite-scroll
+# react-useinfinitescroll
 
 > dynamically sized infinite scrolling capabalities
 
-[![NPM](https://img.shields.io/npm/v/react-use-infinite-scroll.svg)](https://www.npmjs.com/package/react-use-infinite-scroll)
+[![NPM](https://img.shields.io/npm/v/@netanelhaber/react-use-infinite-scroll.svg)](https://www.npmjs.com/package/@netanelhaber/react-use-infinite-scroll)
 
 ## Install
 
 ```bash
-npm install --save react-use-infinite-scroll
+npm install --save @netanelhaber/react-use-infinite-scroll
 ```
 
 ## Usage

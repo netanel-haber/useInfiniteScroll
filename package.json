@@ -1,5 +1,5 @@
 {
-  "name": "react-use-infinite-scroll",
+  "name": "@netanelhaber/react-use-infinite-scroll",
   "version": "1.0.0",
   "description": "dynamically sized infinite scrolling capabalities",
   "author": "netanel-haber",
