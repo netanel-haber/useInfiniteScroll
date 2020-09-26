@@ -1,6 +1,6 @@
 {
-  "name": "@netanelhaber/react-use-infinite-scroll",
-  "version": "1.0.2",
+  "name": "use-easy-infinite-scroll",
+  "version": "1.0.1",
   "description": "dynamically sized infinite scrolling capabalities",
   "author": "netanel-haber",
   "license": "MIT",
